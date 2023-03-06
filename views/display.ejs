@@ -1,0 +1,40 @@
+<html>
+<body>
+    <%- include('menu');%>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Photo</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <% for(var i=0;i<mydata.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= mydata[i].st_id %>
+                    </td>
+                    <td>
+                        <%= mydata[i].st_name %>
+                    </td>
+                    <td>
+                        <%= mydata[i].st_gender %>
+                    </td>
+                  
+                    <td>
+                       <a href="upload/<%= mydata[i].st_photo %>"> <img src='upload/<%= mydata[i].st_photo %>' width="10px" /></a>
+                    </td>
+                    <td>
+                        <%= mydata[i].st_email %>
+                    </td>
+                    
+                    <td>
+                        <a href='/edit/<%= mydata[i].st_id %>'>Edit</a> |
+                        <a href='/delete/<%= mydata[i].st_id %>'>Delete</a>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+</body>
+</html>

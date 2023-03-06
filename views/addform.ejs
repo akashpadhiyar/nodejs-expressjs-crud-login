@@ -1,0 +1,19 @@
+<html>
+
+<body>
+       
+<%- include('menu');%>
+    <form method="post" action="/formprocess" enctype="multipart/form-data">
+        Name : <input type="text" name="txt1" required />
+        Gender :<select name="txt2">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        Photo : <input type="file" name="file123"/>
+        Email : <input type="email" name="email"/>
+        Password : <input type="password" name="password"/>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
